@@ -781,6 +781,83 @@ My hugs will always find you. 🫂
 </button>
 
 `;
+document.getElementById("wheelBtn").onclick=function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🎰 Lucky Love Wheel</h1>
+
+<p id="wheelText">
+Press the button to spin... ❤️
+</p>
+
+<button id="spinBtn">
+🎡 SPIN NOW
+</button>
+
+`;
+
+document.getElementById("spinBtn").onclick=function(){
+
+const prizes=[
+
+"🤗 Unlimited Virtual Hugs",
+
+"📞 Long Call Pass",
+
+"🎥 Online Movie Date",
+
+"📸 Cute Selfie Requested",
+
+"🎵 One Song Dedication",
+
+"💌 Secret Love Letter",
+
+"💋 Kiss Coupon (Valid When We Meet ❤️)",
+
+"👑 World's Best Girlfriend Award 🏆"
+
+];
+
+document.getElementById("spinBtn").disabled=true;
+
+let count=0;
+
+let spin=setInterval(function(){
+
+document.getElementById("wheelText").innerHTML=
+
+prizes[Math.floor(Math.random()*prizes.length)];
+
+count++;
+
+if(count==15){
+
+clearInterval(spin);
+
+let finalPrize=prizes[Math.floor(Math.random()*prizes.length)];
+
+document.getElementById("wheelText").innerHTML=
+
+"<h2>"+finalPrize+"</h2>";
+
+document.querySelector(".card").innerHTML+=`
+
+<br>
+
+<button id="chatBtn">
+📱 Open Our Chat
+</button>
+
+`;
+
+}
+
+},120);
+
+};
+
+};
 
 },800);
 
