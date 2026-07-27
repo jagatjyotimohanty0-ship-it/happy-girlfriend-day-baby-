@@ -171,8 +171,64 @@ clearInterval(timer);
 
 setTimeout(function(){
 
-alert("Scan Complete ❤️");
+document.querySelector(".card").innerHTML = `
 
+<h1>❤️ Compatibility Result ❤️</h1>
+
+<h2 style="font-size:45px;margin:20px 0;">
+Jagat ❤️ Snoor
+</h2>
+
+<h1 style="font-size:65px;color:#ffeb3b;text-shadow:0 0 15px gold;">
+9999%
+</h1>
+
+<p style="margin-top:20px;">
+✅ Daily Care Detected<br><br>
+✅ Unlimited Teasing Detected<br><br>
+✅ Overthinking Together<br><br>
+✅ Lifetime Warranty Found ❤️
+</p>
+
+<button id="certificateBtn">
+📜 Download Love Certificate
+</button>
+
+`;
+document.getElementById("certificateBtn").onclick=function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>📜 Love Certificate</h1>
+
+<p style="font-size:22px;line-height:2;">
+
+This Certificate proudly confirms that
+
+<b>Snoor ❤️</b>
+
+is officially the
+
+<b>World's Best Girlfriend</b>
+
+and has permanent ownership of
+
+<b>Jagat's Heart ❤️</b>
+
+<br><br>
+
+Valid Until:
+<b>Forever ♾️</b>
+
+</p>
+
+<button id="osBtn">
+Continue ❤️
+</button>
+
+`;
+
+};
 },800);
 
 }
