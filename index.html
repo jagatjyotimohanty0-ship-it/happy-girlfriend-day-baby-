@@ -97,6 +97,35 @@ Start Our Surprise 💖
 </div>
 
 </section>
+<script>
 
+const btn = document.getElementById("startBtn");
+
+btn.onclick = function(){
+
+document.querySelector(".card").innerHTML = `
+
+<h1>Welcome Baby ❤️</h1>
+
+<p>
+I made something special just for you...
+Ready to begin our little journey? 🥹💕
+</p>
+
+<button id="nextBtn">
+Let's Go ❤️
+</button>
+
+`;
+
+document.getElementById("nextBtn").onclick=function(){
+
+alert("Our journey begins... ❤️");
+
+};
+
+};
+
+</script>
 </body>
 </html>
