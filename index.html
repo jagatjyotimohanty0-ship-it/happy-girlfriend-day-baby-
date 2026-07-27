@@ -636,7 +636,89 @@ Inside Jagat's Heart Forever. 🔐
 </button>
 
 `;
+document.getElementById("futureBtn").onclick=function(){
 
+document.querySelector(".card").innerHTML=`
+
+<h1>🤖 AI Future Predictor</h1>
+
+<p id="futureText">
+Connecting to Future...
+</p>
+
+<div style="
+width:100%;
+height:20px;
+background:rgba(255,255,255,.3);
+border-radius:20px;
+overflow:hidden;
+margin-top:20px;">
+
+<div id="futureBar" style="
+width:0%;
+height:100%;
+background:#00ff99;
+transition:.8s;">
+</div>
+
+</div>
+
+`;
+
+let futureSteps=[
+"Scanning 2030... ❤️",
+"Scanning 2040... 😄",
+"Scanning 2050... 💖",
+"Future Ready... ✨"
+];
+
+let k=0;
+
+let future=setInterval(function(){
+
+document.getElementById("futureText").innerHTML=futureSteps[k];
+
+document.getElementById("futureBar").style.width=((k+1)*25)+"%";
+
+k++;
+
+if(k==futureSteps.length){
+
+clearInterval(future);
+
+setTimeout(function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🔮 Future Report</h1>
+
+<p style="line-height:2;font-size:20px;">
+
+📅 2030 — Still Together ❤️
+
+<br><br>
+
+📅 2040 — Still Annoying Each Other 😂
+
+<br><br>
+
+📅 2050 — Still Holding Hands... Still Choosing Each Other. ❤️
+
+</p>
+
+<button id="hugBtn">
+🤗 Send Virtual Hug
+</button>
+
+`;
+
+},800);
+
+}
+
+},1000);
+
+};
 };
 }
 
