@@ -926,7 +926,186 @@ document.querySelector(".card").innerHTML+=`
 </button>
 
 `;
+document.getElementById("giftBtn").onclick=function(){
 
+let step=1;
+
+showGift();
+
+function showGift(){
+
+if(step==1){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🎁 Mystery Gift</h1>
+
+<h2>Don't Open... 🙈</h2>
+
+<br>
+
+<button onclick="nextGift()">
+Open Anyway ❤️
+</button>
+
+`;
+
+}
+
+else if(step==2){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🤭 Are You Sure?</h1>
+
+<p>
+
+Iske baad wapas jaane ka option nahi milega. 😜
+
+</p>
+
+<br>
+
+<button onclick="nextGift()">
+Yes ❤️
+</button>
+
+`;
+
+}
+
+else if(step==3){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🥹 Really Sure?</h1>
+
+<p>
+
+Last Chance...
+
+Ready Baby? ❤️
+
+</p>
+
+<br>
+
+<button onclick="nextGift()">
+Open My Gift 🎁
+</button>
+
+`;
+
+}
+
+else{
+
+document.querySelector(".card").innerHTML=`
+
+<h1 style="
+font-size:50px;
+text-shadow:0 0 20px #fff,0 0 40px pink;
+">
+💖 Surprise 💖
+</h1>
+
+<p style="
+font-size:22px;
+line-height:2;
+text-shadow:0 0 12px #ff9ecf;
+">
+
+❤️ 1000 Hearts For You
+
+<br><br>
+
+💖 Unlimited Love
+
+<br><br>
+
+🤗 Unlimited Virtual Hugs
+
+<br><br>
+
+🌍 World's Best Girlfriend Award
+
+</p>
+
+<br>
+
+<button id="letterBtn">
+💌 Read My Letter
+</button>
+
+`;
+
+document.getElementById("letterBtn").onclick=function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1 style="
+text-shadow:0 0 20px pink,0 0 40px white;
+">
+💌 To My Baby ❤️
+</h1>
+
+<p style="
+font-size:22px;
+line-height:2;
+text-shadow:0 0 12px #ff9ecf;
+">
+
+Happy National Girlfriend Day ❤️
+
+<br><br>
+
+Thank You for being a part of my life.
+
+<br><br>
+
+Thank You for every smile,
+every laugh,
+and every beautiful memory.
+
+<br><br>
+
+No matter how many kilometers are between us...
+
+You'll always be my favourite person.
+
+❤️
+
+<br><br>
+
+I Love You So Much Baby.
+
+<br><br>
+
+Forever Yours,
+
+<br>
+
+❤️ Jagat ❤️
+
+</p>
+
+`;
+
+};
+
+}
+
+}
+
+window.nextGift=function(){
+
+step++;
+
+showGift();
+
+}
+
+};
 },1000);
 
 }
