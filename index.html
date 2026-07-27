@@ -850,7 +850,90 @@ document.querySelector(".card").innerHTML+=`
 </button>
 
 `;
+document.getElementById("chatBtn").onclick=function(){
 
+document.querySelector(".card").innerHTML=`
+
+<h1>💬 Our Chats</h1>
+
+<div id="chatBox" style="
+text-align:left;
+background:rgba(255,255,255,.12);
+padding:20px;
+border-radius:20px;
+height:320px;
+overflow:auto;
+margin-top:20px;
+">
+
+</div>
+
+`;
+
+let chats=[
+
+"🧑 Jagat: Good Morning Baby ❤️",
+
+"👩 Snoor: Good Morning Jii ☀️",
+
+"🧑 Jagat: Happy National Girlfriend Day, Baby! 🥹❤️",
+
+"👩 Snoor: Awww... Thank You! ❤️",
+
+"🧑 Jagat: I Made Something Special Just For You. 🎁",
+
+"👩 Snoor: Really? 😍",
+
+"🧑 Jagat: Scroll Down... The Best Surprise Is Waiting. ❤️"
+
+];
+let i=0;
+
+let typing=setInterval(function(){
+
+document.getElementById("chatBox").innerHTML+=`
+
+<div style="
+background:#ffffff22;
+padding:10px;
+border-radius:12px;
+margin-bottom:12px;
+">
+
+${chats[i]}
+
+</div>
+
+`;
+
+document.getElementById("chatBox").scrollTop=
+document.getElementById("chatBox").scrollHeight;
+
+i++;
+
+if(i==chats.length){
+
+clearInterval(typing);
+
+setTimeout(function(){
+
+document.querySelector(".card").innerHTML+=`
+
+<br>
+
+<button id="giftBtn">
+🎁 Open Mystery Gift
+</button>
+
+`;
+
+},1000);
+
+}
+
+},1200);
+
+};
 }
 
 },120);
