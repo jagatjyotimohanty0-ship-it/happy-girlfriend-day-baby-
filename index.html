@@ -280,7 +280,88 @@ Continue ➜
 </button>
 
 `;
+document.getElementById("nextOS").onclick=function(){
 
+document.querySelector(".card").innerHTML=`
+
+<h1>😂 Girlfriend Operating System</h1>
+
+<p id="osText">
+Starting Installation...
+</p>
+
+<div style="
+width:100%;
+height:22px;
+background:rgba(255,255,255,.3);
+border-radius:30px;
+overflow:hidden;
+margin-top:20px;">
+
+<div id="osBar" style="
+width:0%;
+height:100%;
+background:#00ff88;
+transition:.8s;">
+</div>
+
+</div>
+
+`;
+
+let installSteps=[
+"Installing Cute Mode... 😊",
+"Installing Drama Mode... 😂",
+"Installing Angry Mode... 😤",
+"Installing Baby Mode... 🥹",
+"Installing Hug Mode... 🤗",
+"Installing Kiss Protection... 😘",
+"Installation Complete ❤️"
+];
+
+let j=0;
+
+let install=setInterval(function(){
+
+document.getElementById("osText").innerHTML=installSteps[j];
+
+document.getElementById("osBar").style.width=((j+1)*14.3)+"%";
+
+j++;
+
+if(j==installSteps.length){
+
+clearInterval(install);
+
+setTimeout(function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>✅ Installation Complete ❤️</h1>
+
+<p style="font-size:22px;line-height:2;">
+
+Warning ⚠️<br><br>
+
+This Girlfriend Cannot Be Replaced ❤️<br><br>
+
+Lifetime License Activated 💖
+
+</p>
+
+<button id="gameBtn">
+🎮 Continue
+</button>
+
+`;
+
+},1000);
+
+}
+
+},1000);
+
+};
 };
 };
 },800);
